@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Background */
+body {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  background-image: url("./imgs/pur.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Heading */
+h1 {
+  padding: 20px;
+  font-size: 2rem;
+  background: rgba(14, 14, 14, 0.967);
+}
+
+/* CARD */
+.card {
+  width: 450px;
+  height: 550px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 16px;
+  background: #1e293b;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background: rgba(20, 20, 40, 0.7);
+
+  /* Neon border */
+  border: 2px solid transparent;
+  position: relative;
+
+  /* Glow effect */
+  box-shadow:
+    0 0 10px #a855f7,
+    0 0 20px #ec4899,
+    0 0 40px rgba(168, 85, 247, 0.5),
+    0 0 60px rgba(236, 72, 153, 0.3);
+}
+
+/* Neon gradient border layer */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 16px;
+  background: linear-gradient(45deg, #a855f7, #ec4899, #a855f7);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Choices */
+.choices {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.choice {
+  background: #334155;
+  border-radius: 50%;
+  padding: 6px;
+  transition: 0.25s;
+}
+
+.choice img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.choice:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background: #475569;
+}
+
+/* Score */
+.score-board {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 60px;
+  margin-top: 50px;
+}
+
+.score-board p {
+  font-size: 1.8rem;
+  font-weight: bolder;
+}
+
+/* Message */
+.msg-container {
+  margin-bottom: 30px;
+}
+
+#msg {
+  background: #020617;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Button */
+.reset button {
+  background: #3b82f6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.reset button:hover {
+  background: #2563eb;
+}
